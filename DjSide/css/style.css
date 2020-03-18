@@ -372,6 +372,10 @@ body {
   .status-bar.active {
     top: 95vh;
   }
+  .head-wrapper {
+    width: 100%;
+    height: 200vw;
+  }
   .head-wrapper .foto1 {
     background-attachment: scroll;
   }
