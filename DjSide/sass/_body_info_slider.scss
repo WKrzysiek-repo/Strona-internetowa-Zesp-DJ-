@@ -182,6 +182,55 @@ p {
 
 }
 
+
+@media (max-width: 1300px) {
+
+    h1 {
+        display: block;
+        width: 90%;
+        font-size: 6vw;
+        margin: 2% 5% 2% 5%;
+
+    }
+
+    .body-wrapper {
+        height: auto;
+
+
+        .info {
+            max-width: 80%;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-content: center;
+            margin: 0 auto;
+
+
+            .infotext1,
+            .infotext2 {
+                font-size: 1.8vw;
+            }
+
+        }
+    }
+
+    .photo_animation {
+
+        .photo_inside {
+            position: relative;
+            width: 80%;
+            height: 50vmax;
+            margin: 3% auto;
+            box-shadow: 0 0 1em #D05A38;
+        }
+
+    }
+
+
+}
+
+
 @media (max-width: 600px) {
 
     h1 {

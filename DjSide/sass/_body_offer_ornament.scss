@@ -99,6 +99,33 @@
 
 }
 
+@media (max-width: 1300px) {
+
+    .offer-wrapper {
+
+        .offer {
+            max-width: 85%;
+
+            .col1,
+            .col2 {
+                flex-basis: 45%;
+                height: 30vmax;
+
+            }
+        }
+    }
+
+    .gallery {
+
+        .images {
+            max-width: 85%;
+
+        }
+    }
+
+}
+
+
 
 @media (max-width: 600px) {
 
@@ -152,8 +179,6 @@
             }
         }
     }
-
-
 
 
     .ornament2 {
