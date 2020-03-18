@@ -131,7 +131,8 @@
 
     .ornament1 {
         width: 100%;
-        height: 20vmin;
+        //height: 20vmin;
+        height: calc(var(--vh, 1vh) * 30);
 
     }
 
@@ -182,7 +183,8 @@
 
 
     .ornament2 {
-        height: 20vmin;
+        //height: 20vmin;
+        height: calc(var(--vh, 1vh) * 30);
 
 
     }
