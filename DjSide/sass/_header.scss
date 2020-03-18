@@ -315,7 +315,7 @@ body {
 
 
     .head-wrapper {
-
+        height: calc(var(--vh, 1vh) * 100);
 
         .foto1 {
             height: calc(var(--vh, 1vh) * 100);
@@ -327,7 +327,6 @@ body {
             }
 
         }
-
 
         .kontaktbutton {
             right: 2%;
