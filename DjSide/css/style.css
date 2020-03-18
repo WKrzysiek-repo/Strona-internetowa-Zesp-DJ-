@@ -366,7 +366,7 @@ body {
   .status-bar .bar-position a {
     font-size: 2.5vh;
     margin: 2% auto;
-    color: #D05A38;
+    color: blue;
     cursor: pointer;
   }
   .status-bar.active {
