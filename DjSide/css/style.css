@@ -74,7 +74,7 @@ body {
 .head-wrapper .foto1 {
   position: absolute;
   width: 100%;
-  height: 100vh;
+  height: 99.9vh;
   background-image: url(../DjSideImg/vinyl2.jpg);
   background-position: center;
   background-repeat: repeat;
