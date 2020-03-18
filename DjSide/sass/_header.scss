@@ -276,10 +276,13 @@ body {
 
 @media (max-width: 600px) {
 
+    html {
+        height: calc(var(--vh, 1vh) * 100);
+    }
 
 
     .status-bar {
-        display: block;
+        display: none;
         position: fixed;
         top: 100vh;
         right: 0%;
