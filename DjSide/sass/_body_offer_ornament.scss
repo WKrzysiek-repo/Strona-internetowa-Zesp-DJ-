@@ -131,7 +131,7 @@
 
     .ornament1 {
         width: 100%;
-        height: calc(var(--vh, 1vh) * 30);
+        height: 20vmin;
 
     }
 
@@ -147,7 +147,7 @@
             .col2 {
 
                 flex-basis: 90%;
-                height: 40vmax;
+                height: 40vh;
 
                 margin: 5%;
 
@@ -182,7 +182,7 @@
 
 
     .ornament2 {
-        height: calc(var(--vh, 1vh) * 30);
+        height: 20vmin;
 
 
     }

@@ -9,6 +9,7 @@
 
 html {
   scroll-behavior: smooth;
+  min-height: -webkit-fill-available;
 }
 
 body {
@@ -336,7 +337,7 @@ body {
 
 @media (max-width: 600px) {
   html {
-    height: calc(var(--vh, 1vh) * 100);
+    min-height: -webkit-fill-available;
   }
   .status-bar {
     display: none;
@@ -842,7 +843,7 @@ p {
 @media (max-width: 600px) {
   .ornament1 {
     width: 100%;
-    height: calc(var(--vh, 1vh) * 30);
+    height: 20vmin;
   }
   .offer-wrapper .offer {
     max-width: 100%;
@@ -851,7 +852,7 @@ p {
   .offer-wrapper .offer .col2 {
     -ms-flex-preferred-size: 90%;
         flex-basis: 90%;
-    height: 40vmax;
+    height: 40vh;
     margin: 5%;
   }
   .gallery .images {
@@ -868,7 +869,7 @@ p {
             transform: scale(1.1);
   }
   .ornament2 {
-    height: calc(var(--vh, 1vh) * 30);
+    height: 20vmin;
   }
 }
 
