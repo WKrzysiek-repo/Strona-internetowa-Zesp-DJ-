@@ -697,6 +697,7 @@ p {
   }
   .photo_animation .photo_inside {
     width: 90%;
+    height: 30vmax;
   }
 }
 
