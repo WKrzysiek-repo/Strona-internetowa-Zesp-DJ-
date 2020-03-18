@@ -278,16 +278,17 @@ body {
 
     html {
         min-height: -webkit-fill-available;
+        height: calc(var(--vh, 1vh) * 100);
     }
 
 
     .status-bar {
         display: block;
         position: fixed;
-        top: 100vh;
+        top: calc(var(--vh, 1vh) * 100);
         right: 0%;
         width: 100%;
-        height: 7vh;
+        height: calc(var(--vh, 1vh) * 7);
 
 
         .bar-position {
@@ -328,7 +329,7 @@ body {
             p {
                 font-size: 6vw;
                 width: 90%;
-                color: green;
+                color: salmon;
             }
 
         }
@@ -337,7 +338,8 @@ body {
             right: 2%;
             font-size: 5vh;
             width: 7vh;
-            height: 7vh;
+            height: calc(var(--vh, 1vh) * 7);
+
 
             &:hover {
                 color: black;

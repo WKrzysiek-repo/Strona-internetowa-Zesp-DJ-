@@ -338,14 +338,15 @@ body {
 @media (max-width: 600px) {
   html {
     min-height: -webkit-fill-available;
+    height: calc(var(--vh, 1vh) * 100);
   }
   .status-bar {
     display: block;
     position: fixed;
-    top: 100vh;
+    top: calc(var(--vh, 1vh) * 100);
     right: 0%;
     width: 100%;
-    height: 7vh;
+    height: calc(var(--vh, 1vh) * 7);
   }
   .status-bar .bar-position {
     position: absolute;
@@ -386,13 +387,13 @@ body {
   .head-wrapper .foto1 p {
     font-size: 6vw;
     width: 90%;
-    color: green;
+    color: salmon;
   }
   .head-wrapper .kontaktbutton {
     right: 2%;
     font-size: 5vh;
     width: 7vh;
-    height: 7vh;
+    height: calc(var(--vh, 1vh) * 7);
   }
   .head-wrapper .kontaktbutton:hover {
     color: black;
@@ -705,7 +706,7 @@ p {
   }
   .photo_animation .photo_inside {
     width: 90%;
-    height: 30vmax;
+    height: calc(var(--vh, 1vh) * 30);
   }
 }
 
@@ -844,7 +845,7 @@ p {
 @media (max-width: 600px) {
   .ornament1 {
     width: 100%;
-    height: calc(var(--vh, 1vh) * 30);
+    height: calc(var(--vh, 1vh) * 20);
   }
   .offer-wrapper .offer {
     max-width: 100%;
@@ -853,7 +854,7 @@ p {
   .offer-wrapper .offer .col2 {
     -ms-flex-preferred-size: 90%;
         flex-basis: 90%;
-    height: 40vh;
+    height: calc(var(--vh, 1vh) * 40);
     margin: 5%;
   }
   .gallery .images {
@@ -861,8 +862,8 @@ p {
   }
   .gallery .images a {
     margin: 3% 1%;
-    -ms-flex-preferred-size: 20vh;
-        flex-basis: 20vh;
+    -ms-flex-preferred-size: calc(var(--vh, 1vh) * 20);
+        flex-basis: calc(var(--vh, 1vh) * 20);
     height: 15vh;
   }
   .gallery .images a:hover {
@@ -870,7 +871,7 @@ p {
             transform: scale(1.1);
   }
   .ornament2 {
-    height: calc(var(--vh, 1vh) * 30);
+    height: calc(var(--vh, 1vh) * 20);
   }
 }
 
@@ -1397,7 +1398,7 @@ aside nav ul i {
   .burger {
     top: 5%;
     left: 5%;
-    font-size: 4vh;
+    font-size: calc(var(--vh, 1vh) * 4);
   }
   aside {
     left: -100%;

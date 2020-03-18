@@ -272,7 +272,8 @@ p {
 
         .photo_inside {
             width: 90%;
-            height: 30vmax;
+            //height: 30vmax;
+            height: calc(var(--vh, 1vh) * 30);
 
 
         }
