@@ -335,6 +335,13 @@ body {
 }
 
 @media (max-width: 600px) {
+  html {
+    min-height: -moz-available;
+    /* WebKit-based browsers will ignore this. */
+    min-height: -webkit-fill-available;
+    /* Mozilla-based browsers will ignore this. */
+    min-height: fill-available;
+  }
   .status-bar {
     display: block;
     position: fixed;
@@ -382,7 +389,7 @@ body {
   .head-wrapper .foto1 p {
     font-size: 6vw;
     width: 90%;
-    color: green;
+    color: white;
   }
   .head-wrapper .kontaktbutton {
     right: 2%;
