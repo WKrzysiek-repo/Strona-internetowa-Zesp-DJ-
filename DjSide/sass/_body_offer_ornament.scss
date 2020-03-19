@@ -1,5 +1,5 @@
 .ornament1 {
-    display: none;
+    display: block;
     width: 100%;
     height: 40vmin;
     background-image: url(../DjSideImg/przerywnik5.jpg);
@@ -11,9 +11,7 @@
 
 }
 
-////////////////////////////////
 .offer-wrapper {
-    display: none;
     height: auto;
 
     .offer {
@@ -49,10 +47,7 @@
     }
 }
 
-/////////////////////////////////////
-
 .gallery {
-    display: none;
 
     .images {
         max-width: 65%;
@@ -91,8 +86,7 @@
 }
 
 .ornament2 {
-    display: none;
-    ;
+    display: block;
     width: 100%;
     height: 40vmin;
     background-image: url(../DjSideImg/przerywnik3.jpg);
@@ -104,8 +98,6 @@
     opacity: 50%;
 
 }
-
-////////////////////////////////////////////////////////
 
 @media (max-width: 1300px) {
 
