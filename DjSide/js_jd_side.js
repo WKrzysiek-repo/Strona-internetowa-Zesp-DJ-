@@ -1,24 +1,24 @@
-// const $doc = $(document);
-// const $header = $('.foto1');
-// const $main = $('.main-side');
+const $doc = $(document);
+const $header = $('.foto1');
+const $main = $('.main-side');
 
-// $doc.on('scroll', function () {
-//     const scrollPos = $doc.scrollTop();
+$doc.on('scroll', function () {
+    const scrollPos = $doc.scrollTop();
 
-//     const sectionOffset = $main.offset().top;
+    const sectionOffset = $main.offset().top;
 
-//     const headerHeight = $header.outerHeight();
-
-
+    const headerHeight = $header.outerHeight();
 
 
-//     if (scrollPos < sectionOffset) {
-//         $header.css({
-//             'filter': 'grayscale(' + scrollPos / headerHeight + ')'
-//         })
 
-//     }
-// })
+
+    if (scrollPos < sectionOffset) {
+        $header.css({
+            'filter': 'grayscale(' + scrollPos / headerHeight + ')'
+        })
+
+    }
+})
 
 
 let vh = window.innerHeight * 0.01;

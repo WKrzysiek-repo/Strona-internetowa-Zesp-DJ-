@@ -439,7 +439,7 @@ body {
     height: calc(var(--vh, 1vh) * 100);
   }
   .head-wrapper .status-bar {
-    display: block;
+    display: none;
     position: fixed;
     top: 100vh;
     right: 0%;
@@ -1424,12 +1424,11 @@ footer button i {
 }
 
 .load {
-  border: 3vh dotted brown;
+  border: 1vh solid brown;
   border-radius: 50%;
-  border-top: 3vh solid darkorange;
-  border-bottom: 3vh solid darkorange;
-  width: 10vh;
-  height: 10vh;
+  border-top: 1vh solid darkorange;
+  width: 8vh;
+  height: 8vh;
   -webkit-animation: animationloader 2s linear infinite;
           animation: animationloader 2s linear infinite;
 }

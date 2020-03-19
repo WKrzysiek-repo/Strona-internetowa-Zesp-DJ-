@@ -197,58 +197,58 @@ $(document).on('scroll', function () {
 var preloaderEl = document.querySelector('#preloader');
 
 window.addEventListener('load', function () {
-    preloaderEl.classList.add('preloader-hiding');
+            preloaderEl.classList.add('preloader-hiding');
 
-    preloaderEl.addEventListener('transitionend', function () {
-        this.classList.add('preloader-hidden');
-        this.classList.remove('preloader-hiding');
-    });
-});
+            //     preloaderEl.addEventListener('transitionend', function () {
+            //         this.classList.add('preloader-hidden');
+            //         this.classList.remove('preloader-hiding');
+            //     });
+            // });
 
 
 
-//nav
-const burger = document.querySelector(".burger");
-const iconBurger = document.querySelector(".fa-bars");
-const iconX = document.querySelector(".fa-times");
-const column = document.querySelector("aside");
-const listicon = document.querySelector("ul");
+            //nav
+            const burger = document.querySelector(".burger");
+            const iconBurger = document.querySelector(".fa-bars");
+            const iconX = document.querySelector(".fa-times");
+            const column = document.querySelector("aside");
+            const listicon = document.querySelector("ul");
 
-burger.addEventListener('click', function () {
-    burger.classList.toggle('active');
-    iconBurger.classList.toggle("show");
-    iconX.classList.toggle("show");
-    column.classList.toggle("show");
+            burger.addEventListener('click', function () {
+                burger.classList.toggle('active');
+                iconBurger.classList.toggle("show");
+                iconX.classList.toggle("show");
+                column.classList.toggle("show");
 
-})
+            })
 
-listicon.addEventListener('click', function () {
-    column.classList.toggle('show');
-    burger.classList.toggle('active');
-    iconBurger.classList.toggle("show");
-    iconX.classList.toggle("show");
-})
+            listicon.addEventListener('click', function () {
+                column.classList.toggle('show');
+                burger.classList.toggle('active');
+                iconBurger.classList.toggle("show");
+                iconX.classList.toggle("show");
+            })
 
-$('.fa-mail-bulk').on('click', function () {
-    console.log(this);
-    $('body,html').animate({
-        scrollTop: $('.contact-wrapper').offset().top,
-    }, 1000)
+            $('.fa-mail-bulk').on('click', function () {
+                console.log(this);
+                $('body,html').animate({
+                    scrollTop: $('.contact-wrapper').offset().top,
+                }, 1000)
 
-})
+            })
 
-$('.arrow').on('click', function () {
-    $('body,html').animate({
-        scrollTop: $('.body-wrapper').offset().top,
-    }, 1000)
+            $('.arrow').on('click', function () {
+                $('body,html').animate({
+                    scrollTop: $('.body-wrapper').offset().top,
+                }, 1000)
 
-})
+            })
 
-$('nav a, .bar-position a').on('click', function () {
-    const goToSection = '#' + $(this).attr('class');
+            $('nav a, .bar-position a').on('click', function () {
+                const goToSection = '#' + $(this).attr('class');
 
-    $('body,html').animate({
-        scrollTop: $(goToSection).offset().top,
-    }, 500)
+                $('body,html').animate({
+                    scrollTop: $(goToSection).offset().top,
+                }, 500)
 
-})
+            })
