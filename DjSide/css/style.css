@@ -438,49 +438,12 @@ body {
   .head-wrapper {
     height: calc(var(--vh, 1vh) * 100);
   }
-  .head-wrapper .status-bar {
-    display: block;
-    position: fixed;
-    top: 100vh;
-    right: 0%;
-    width: 100%;
-    height: 7vh;
-  }
-  .head-wrapper .status-bar .bar-position {
-    position: absolute;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    width: 100%;
-    -webkit-transform-origin: center;
-            transform-origin: center;
-    -webkit-transform: translateY(-50%);
-            transform: translateY(-50%);
-    top: 50%;
-    background-color: rgba(0, 0, 0, 0.8);
-    border-left: 0px solid #D05A38;
-    border-top: 0px solid #D05A38;
-    border-radius: 0px;
-  }
-  .head-wrapper .status-bar .bar-position a {
-    font-size: 2.5vh;
-    margin: 2% auto;
-    color: darkorange;
-    cursor: pointer;
-  }
-  .head-wrapper .status-bar.active {
-    top: 95vh;
-  }
   .head-wrapper .foto1 {
     height: calc(var(--vh, 1vh) * 100);
     background-attachment: scroll;
   }
   .head-wrapper .foto1 p {
-    font-size: 6vw;
+    font-size: 2.3rem;
     width: 90%;
     color: white;
   }
@@ -521,7 +484,8 @@ body {
     border-right: 2px groove #D05A38;
     border-bottom: 2px groove #D05A38;
     height: calc(var(--vh, 1vh) * 100);
-    height: 100vh;
+    top: 2vh;
+    height: 90vh;
   }
   .head-wrapper aside nav ul a {
     display: block;
@@ -839,7 +803,7 @@ p {
   .body-wrapper .info p {
     font-size: 1.5rem;
     text-align: justify;
-    color: red;
+    color: white;
     margin: 3% 5%;
   }
   .photo_animation {
@@ -991,6 +955,7 @@ p {
   .ornament1 {
     width: 100%;
     height: 10rem;
+    background-attachment: local;
   }
   .offer-wrapper .offer {
     max-width: 100%;
@@ -1017,6 +982,7 @@ p {
   }
   .ornament2 {
     height: 10rem;
+    background-attachment: local;
   }
 }
 
