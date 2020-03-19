@@ -46,55 +46,10 @@
 
 @media (max-width: 600px) {
 
-    .burger {
-        top: 5%;
-        left: 5%;
-        font-size: 4vh;
-
-    }
 
 
 
-    aside {
-        left: -100%;
-        width: 100%;
-        background-color: rgba(0, 0, 0, 0.95);
-        border-bottom-right-radius: 0px 0px;
-        border-top: 2px groove #D05A38;
-        border-right: 2px groove #D05A38;
-        border-bottom: 2px groove #D05A38;
 
-        nav ul {
-
-            a {
-                display: block;
-                line-height: 10vh;
-                font-size: 2.5vh;
-                color: white;
-                text-decoration: none;
-                font-family: arial;
-                padding: 0 5% 0 25%;
-
-                &:hover i {
-                    margin-right: 10%;
-                }
-
-                &:hover {
-                    color: white;
-                }
-            }
-
-            i {
-                width: 5vh;
-                border-right: solid white 2px;
-                margin-right: 30px;
-                transition: .3s;
-            }
-
-        }
-
-
-    }
 
     #preloader {
         background-image: linear-gradient(315deg, #130f40 0%, #000000 74%);

@@ -425,6 +425,9 @@ body {
 }
 
 @media (max-width: 600px) {
+  html {
+    font-size: 62.5%;
+  }
   body {
     min-height: -moz-available;
     /* WebKit-based browsers will ignore this. */
@@ -483,9 +486,9 @@ body {
   }
   .head-wrapper .kontaktbutton {
     right: 2%;
-    font-size: 5vh;
-    width: 7vh;
-    height: 7vh;
+    font-size: 4rem;
+    width: 6rem;
+    height: 6rem;
   }
   .head-wrapper .kontaktbutton:hover {
     color: black;
@@ -507,21 +510,22 @@ body {
   .head-wrapper .burger {
     top: 5%;
     left: 5%;
-    font-size: 4vh;
+    font-size: 3.5rem;
   }
   .head-wrapper aside {
-    left: -100%;
-    width: 100%;
+    left: -70%;
+    width: 70%;
     background-color: rgba(0, 0, 0, 0.95);
-    border-bottom-right-radius: 0px 0px;
+    border-radius: 0px 60px 60px 0px;
     border-top: 2px groove #D05A38;
     border-right: 2px groove #D05A38;
     border-bottom: 2px groove #D05A38;
     height: calc(var(--vh, 1vh) * 100);
+    height: 95vh;
   }
   .head-wrapper aside nav ul a {
     display: block;
-    line-height: 9vh;
+    line-height: 10vh;
     font-size: 2.5vh;
     color: white;
     text-decoration: none;
@@ -817,6 +821,9 @@ p {
 }
 
 @media (max-width: 600px) {
+  html {
+    font-size: 62.5%;
+  }
   h1 {
     width: 100%;
     font-size: 10vw;
@@ -830,9 +837,9 @@ p {
         flex-basis: 90%;
   }
   .body-wrapper .info p {
-    font-size: 2vh;
+    font-size: 1.5rem;
     text-align: justify;
-    color: white;
+    color: red;
     margin: 3% 5%;
   }
   .photo_animation {
@@ -1451,42 +1458,6 @@ footer button i {
 }
 
 @media (max-width: 600px) {
-  .burger {
-    top: 5%;
-    left: 5%;
-    font-size: 4vh;
-  }
-  aside {
-    left: -100%;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.95);
-    border-bottom-right-radius: 0px 0px;
-    border-top: 2px groove #D05A38;
-    border-right: 2px groove #D05A38;
-    border-bottom: 2px groove #D05A38;
-  }
-  aside nav ul a {
-    display: block;
-    line-height: 10vh;
-    font-size: 2.5vh;
-    color: white;
-    text-decoration: none;
-    font-family: arial;
-    padding: 0 5% 0 25%;
-  }
-  aside nav ul a:hover i {
-    margin-right: 10%;
-  }
-  aside nav ul a:hover {
-    color: white;
-  }
-  aside nav ul i {
-    width: 5vh;
-    border-right: solid white 2px;
-    margin-right: 30px;
-    -webkit-transition: .3s;
-    transition: .3s;
-  }
   #preloader {
     background-image: linear-gradient(315deg, #130f40 0%, #000000 74%);
     width: 100%;
