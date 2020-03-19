@@ -2,7 +2,30 @@ let vh = window.innerHeight * 0.01;
 document.documentElement.style.setProperty('--vh', `${vh}px`);
 
 
+// const $doc = $(document);
+// const $header = $('.foto1');
+// const $main = $('.main-side');
 
+// $doc.on('scroll', function () {
+//     const scrollPos = $doc.scrollTop();
+
+//     const sectionOffset = $main.offset().top;
+
+//     const headerHeight = $header.outerHeight();
+
+
+
+
+//     if (scrollPos < sectionOffset) {
+//         $header.css({
+//             'filter': 'sepia(' + scrollPos / headerHeight + ')'
+//         })
+
+//     }
+// })
+
+
+//button message
 var top_Button = document.querySelector('top1');
 
 $('.top1').on('click', function () {
@@ -35,16 +58,66 @@ $(document).on('scroll', function () {
     const text2Height = $text2.height();
 
 
+    const $headersection = $('.head-wrapper');
+    const headerFromTop = $headersection.offset().top;
+    const headersectionHeight = $headersection.outerHeight();
+
+    const $bodysection = $('.body-wrapper');
+    const bodyFromTop = $bodysection.offset().top;
+    const bodysectionHeight = $bodysection.outerHeight();
+
+    const $animationsection = $('.photo_animation');
+    const animationFromTop = $animationsection.offset().top;
+    const animationsectionHeight = $animationsection.outerHeight();
+
+    const $offersection = $('.offer-wrapper');
+    const offerFromTop = $offersection.offset().top;
+    const offersectionHeight = $offersection.outerHeight();
+
+    const $gallerysection = $('.gallery');
+    const galleryFromTop = $gallerysection.offset().top;
+    const gallerysectionHeight = $gallerysection.outerHeight();
+
+    const $contactsection = $('.contact-wrapper');
+    const contactFromTop = $contactsection.offset().top;
+    const contactsectionHeight = $contactsection.outerHeight();
+
+    const $bar1 = $('.status-bar');
+    const $ibar = $('.fa-circle');
+
+    if (scrollvalue > headersectionHeight - 100) {
+        $bar1.addClass('active');
+    } else {
+        $bar1.removeClass('active');
+    }
+
+    if (scrollvalue < bodysectionHeight + bodyFromTop - 2) {
+        $ibar.removeClass('fas');
+        $('.dot1').addClass('fas')
+    } else if (scrollvalue < animationsectionHeight + animationFromTop) {
+        $ibar.removeClass('fas');
+        $('.dot2').addClass('fas')
+    } else if (scrollvalue < offersectionHeight + offerFromTop - 2) {
+        $ibar.removeClass('fas');
+        $('.dot3').addClass('fas')
+    } else if (scrollvalue < gallerysectionHeight + galleryFromTop) {
+        $ibar.removeClass('fas');
+        $('.dot4').addClass('fas')
+    } else if (scrollvalue < contactsectionHeight + contactFromTop) {
+        $ibar.removeClass('fas');
+        $('.dot5').addClass('fas')
+    }
 
     if ($(window).width() < 600) {
 
-        // $(window).scroll(function () {
-        //     if ($(window).scrollTop() + $(window).height() > $(document).height() - 100) {
-        //         $ibar.removeClass('fas');
-        //         $('.dot5').addClass('fas')
-        //         $bar1.removeClass('active');
-        //     }
-        // });
+        $(window).scroll(function () {
+            if ($(window).scrollTop() + $(window).height() > $(document).height() - 100) {
+                $ibar.removeClass('fas');
+                $('.dot5').addClass('fas')
+                $bar1.removeClass('active');
+            }
+        });
+
 
         if (scrollvalue > photo1FromTop + photo1Height - windowHeight) {
             $photo1.addClass('active');
