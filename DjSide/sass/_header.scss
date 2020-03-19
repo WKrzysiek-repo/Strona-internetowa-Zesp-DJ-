@@ -9,67 +9,68 @@
 
 html {
     scroll-behavior: smooth;
-    //font-size: 10px;
-    //font-size: 62.5%;
-    //min-height: -webkit-fill-available;
+    min-height: -webkit-fill-available;
 }
 
 
 
 body {
-    background-color: #0c0930;
-    background-image: linear-gradient(300deg, #0c0930 0%, #000000 70%);
+    //background-color: #0c0930;
+    //  background-image: linear-gradient(300deg, #0c0930 0%, #000000 70%);
 }
 
 
-.status-bar {
-    display: block;
-    position: fixed;
-    top: 0;
-    right: -5%;
-    width: 2%;
-    height: 100vh;
-    z-index: 1000;
-    transition: 0.5s;
-
-    .bar-position {
-        position: absolute;
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        transform-origin: center;
-        transform: translateY(-50%);
-        top: 50%;
-        background-color: rgba(0, 0, 0, 0.5);
-        border-left: 2px solid #D05A38;
-        border-top: 2px solid #D05A38;
-        border-bottom: 2px solid #D05A38;
-        // border: 2px solid #D05A38;
-        border-radius: 50px 0 0 50px;
-
-
-        a {
-            font-size: 2vh;
-            margin: 100% auto;
-            color: #D05A38;
-            cursor: pointer;
-        }
-    }
-
-    &.active {
-        right: 0%;
-    }
-
-    &.hide {
-        display: none;
-    }
-}
 
 
 .head-wrapper {
     width: 100%;
     height: 100vh;
     background-color: black;
+
+
+    .status-bar {
+        display: block;
+        position: fixed;
+        top: 0;
+        right: -5%;
+        width: 2%;
+        height: 100vh;
+        z-index: 1000;
+        transition: 0.5s;
+
+        .bar-position {
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            transform-origin: center;
+            transform: translateY(-50%);
+            top: 50%;
+            background-color: rgba(0, 0, 0, 0.5);
+            border-left: 2px solid #D05A38;
+            border-top: 2px solid #D05A38;
+            border-bottom: 2px solid #D05A38;
+            // border: 2px solid #D05A38;
+            border-radius: 50px 0 0 50px;
+
+
+            a {
+                font-size: 2vh;
+                margin: 100% auto;
+                color: #D05A38;
+                cursor: pointer;
+            }
+        }
+
+        &.active {
+            right: 0%;
+        }
+
+        &.hide {
+            display: none;
+        }
+    }
+
 
     .foto1 {
         position: absolute;
@@ -281,57 +282,56 @@ body {
     }
 
 
-    .status-bar {
-        display: none;
-        position: fixed;
-        //top: 100vh;
-        top: calc(var(--vh, 1vh) * 100);
-        right: 0%;
-        width: 100%;
-        height: 7vh;
+
+    .head-wrapper {
+        height: calc(var(--vh, 1vh) * 100);
 
 
-        .bar-position {
-            position: absolute;
-            display: flex;
-            flex-direction: row;
+        .status-bar {
+            display: none;
+            position: fixed;
+            top: 100vh;
+            right: 0%;
             width: 100%;
-            transform-origin: center;
-            transform: translateY(-50%);
-            top: 50%;
-            background-color: rgba(0, 0, 0, 0.8);
-            border-left: 0px solid #D05A38;
-            border-top: 0px solid #D05A38;
-            border-radius: 0px;
+            height: 7vh;
 
 
-            a {
-                font-size: 2.5vh;
-                margin: 2% auto;
-                color: blue;
-                cursor: pointer;
+            .bar-position {
+                position: absolute;
+                display: flex;
+                flex-direction: row;
+                width: 100%;
+                transform-origin: center;
+                transform: translateY(-50%);
+                top: 50%;
+                background-color: rgba(0, 0, 0, 0.8);
+                border-left: 0px solid #D05A38;
+                border-top: 0px solid #D05A38;
+                border-radius: 0px;
+
+
+                a {
+                    font-size: 2.5vh;
+                    margin: 2% auto;
+                    color: blue;
+                    cursor: pointer;
+                }
+            }
+
+            &.active {
+                top: 95vh;
             }
         }
 
-        &.active {
-            top: 95vh;
-        }
-    }
-
-
-    .head-wrapper {
-        //height: 100vh;
-        height: calc(var(--vh, 1vh) * 100);
 
         .foto1 {
-            //height: 100vh;
-            height: calc(var(--vh, 1vh) * 100);
+            height: 100vh;
             background-attachment: scroll;
 
             p {
                 font-size: 6vw;
                 width: 90%;
-                color: pink;
+                color: yellow;
             }
 
         }
@@ -339,10 +339,8 @@ body {
         .kontaktbutton {
             right: 2%;
             font-size: 5vh;
-            //width: 7vh;
-            //height: 7vh;
-            width: calc(var(--vh, 1vh) * 7);
-            height: calc(var(--vh, 1vh) * 7);
+            width: 7vh;
+            height: 7vh;
 
             &:hover {
                 color: black;

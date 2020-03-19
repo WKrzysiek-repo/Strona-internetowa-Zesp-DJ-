@@ -9,14 +9,16 @@
 
 html {
   scroll-behavior: smooth;
+  min-height: -webkit-fill-available;
 }
 
-body {
-  background-color: #0c0930;
-  background-image: linear-gradient(300deg, #0c0930 0%, #000000 70%);
+.head-wrapper {
+  width: 100%;
+  height: 100vh;
+  background-color: black;
 }
 
-.status-bar {
+.head-wrapper .status-bar {
   display: block;
   position: fixed;
   top: 0;
@@ -28,7 +30,7 @@ body {
   transition: 0.5s;
 }
 
-.status-bar .bar-position {
+.head-wrapper .status-bar .bar-position {
   position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -50,25 +52,19 @@ body {
   border-radius: 50px 0 0 50px;
 }
 
-.status-bar .bar-position a {
+.head-wrapper .status-bar .bar-position a {
   font-size: 2vh;
   margin: 100% auto;
   color: #D05A38;
   cursor: pointer;
 }
 
-.status-bar.active {
+.head-wrapper .status-bar.active {
   right: 0%;
 }
 
-.status-bar.hide {
+.head-wrapper .status-bar.hide {
   display: none;
-}
-
-.head-wrapper {
-  width: 100%;
-  height: 100vh;
-  background-color: black;
 }
 
 .head-wrapper .foto1 {
@@ -338,15 +334,18 @@ body {
   html {
     min-height: -webkit-fill-available;
   }
-  .status-bar {
+  .head-wrapper {
+    height: calc(var(--vh, 1vh) * 100);
+  }
+  .head-wrapper .status-bar {
     display: none;
     position: fixed;
-    top: calc(var(--vh, 1vh) * 100);
+    top: 100vh;
     right: 0%;
     width: 100%;
     height: 7vh;
   }
-  .status-bar .bar-position {
+  .head-wrapper .status-bar .bar-position {
     position: absolute;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -366,32 +365,29 @@ body {
     border-top: 0px solid #D05A38;
     border-radius: 0px;
   }
-  .status-bar .bar-position a {
+  .head-wrapper .status-bar .bar-position a {
     font-size: 2.5vh;
     margin: 2% auto;
     color: blue;
     cursor: pointer;
   }
-  .status-bar.active {
+  .head-wrapper .status-bar.active {
     top: 95vh;
   }
-  .head-wrapper {
-    height: calc(var(--vh, 1vh) * 100);
-  }
   .head-wrapper .foto1 {
-    height: calc(var(--vh, 1vh) * 100);
+    height: 100vh;
     background-attachment: scroll;
   }
   .head-wrapper .foto1 p {
     font-size: 6vw;
     width: 90%;
-    color: pink;
+    color: yellow;
   }
   .head-wrapper .kontaktbutton {
     right: 2%;
     font-size: 5vh;
-    width: calc(var(--vh, 1vh) * 7);
-    height: calc(var(--vh, 1vh) * 7);
+    width: 7vh;
+    height: 7vh;
   }
   .head-wrapper .kontaktbutton:hover {
     color: black;
@@ -682,9 +678,6 @@ p {
     font-size: 10vw;
     margin: 10% 0%;
   }
-  .body-wrapper {
-    height: calc(var(--vh, 1vh) * auto);
-  }
   .body-wrapper .info {
     max-width: 100%;
   }
@@ -709,7 +702,7 @@ p {
 }
 
 .ornament1 {
-  display: block;
+  display: none;
   width: 100%;
   height: 40vmin;
   background-image: url(../DjSideImg/przerywnik5.jpg);
@@ -722,6 +715,7 @@ p {
 }
 
 .offer-wrapper {
+  display: none;
   height: auto;
 }
 
@@ -768,6 +762,10 @@ p {
           transform: scale(1);
 }
 
+.gallery {
+  display: none;
+}
+
 .gallery .images {
   max-width: 65%;
   margin: 0 auto;
@@ -812,7 +810,7 @@ p {
 }
 
 .ornament2 {
-  display: block;
+  display: none;
   width: 100%;
   height: 40vmin;
   background-image: url(../DjSideImg/przerywnik3.jpg);
@@ -844,7 +842,6 @@ p {
   .ornament1 {
     width: 100%;
     height: 20vmin;
-    background-attachment: local;
   }
   .offer-wrapper .offer {
     max-width: 100%;
@@ -871,14 +868,11 @@ p {
   }
   .ornament2 {
     height: 20vmin;
-    background-attachment: local;
   }
 }
 
 .all-contact {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -1395,21 +1389,22 @@ aside nav ul i {
 }
 
 @media (max-width: 600px) {
-  .burger {
+  .head-wrapper .burger {
     top: 5%;
     left: 5%;
     font-size: 4vh;
   }
-  aside {
+  .head-wrapper aside {
     left: -100%;
     width: 100%;
+    height: calc(var(--vh, 1vh) * 100);
     background-color: rgba(0, 0, 0, 0.95);
     border-bottom-right-radius: 0px 0px;
     border-top: 2px groove #D05A38;
     border-right: 2px groove #D05A38;
     border-bottom: 2px groove #D05A38;
   }
-  aside nav ul a {
+  .head-wrapper aside nav ul a {
     display: block;
     line-height: 10vh;
     font-size: 2.5vh;
@@ -1418,13 +1413,13 @@ aside nav ul i {
     font-family: arial;
     padding: 0 5% 0 25%;
   }
-  aside nav ul a:hover i {
+  .head-wrapper aside nav ul a:hover i {
     margin-right: 10%;
   }
-  aside nav ul a:hover {
+  .head-wrapper aside nav ul a:hover {
     color: white;
   }
-  aside nav ul i {
+  .head-wrapper aside nav ul i {
     width: 5vh;
     border-right: solid white 2px;
     margin-right: 30px;
@@ -1434,7 +1429,7 @@ aside nav ul i {
   #preloader {
     background-image: linear-gradient(315deg, #130f40 0%, #000000 74%);
     width: 100%;
-    height: 100%;
+    height: calc(var(--vh, 1vh) * 100);
     position: fixed;
     top: 0;
     left: 0;
@@ -1453,11 +1448,11 @@ aside nav ul i {
     transition: opacity .35s ease;
   }
   .dot {
-    width: 80px;
-    height: 80px;
+    width: 2vh;
+    height: 2vh;
     margin: 0 10px;
     border-radius: 50%;
-    border: 4px dotted red;
+    border: 2vh dotted blue;
     -webkit-animation: show-hide 1s linear infinite;
             animation: show-hide 1s linear infinite;
   }
