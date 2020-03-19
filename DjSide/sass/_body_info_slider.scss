@@ -241,8 +241,7 @@ p {
 
 
     .body-wrapper {
-        //height: 100%;
-        height: calc(var(--vh, 1vh) * 100);
+        height: 100%;
 
 
 
@@ -270,7 +269,6 @@ p {
     .photo_animation {
         width: 100%;
         margin: 10% auto;
-        height: calc(var(--vh, 1vh) * auto);
 
         .photo_inside {
             width: 90%;

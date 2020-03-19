@@ -385,7 +385,7 @@ body {
   .head-wrapper .foto1 p {
     font-size: 6vw;
     width: 90%;
-    color: red;
+    color: green;
   }
   .head-wrapper .kontaktbutton {
     right: 2%;
@@ -683,7 +683,7 @@ p {
     margin: 10% 0%;
   }
   .body-wrapper {
-    height: calc(var(--vh, 1vh) * 100);
+    height: 100%;
   }
   .body-wrapper .info {
     max-width: 100%;
@@ -701,7 +701,6 @@ p {
   .photo_animation {
     width: 100%;
     margin: 10% auto;
-    height: calc(var(--vh, 1vh) * auto);
   }
   .photo_animation .photo_inside {
     width: 90%;
@@ -723,7 +722,7 @@ p {
 }
 
 .offer-wrapper {
-  height: calc(var(--vh, 1vh) * auto);
+  height: auto;
 }
 
 .offer-wrapper .offer {
@@ -845,6 +844,7 @@ p {
   .ornament1 {
     width: 100%;
     height: 20vmin;
+    background-attachment: local;
   }
   .offer-wrapper .offer {
     max-width: 100%;
@@ -871,6 +871,7 @@ p {
   }
   .ornament2 {
     height: 20vmin;
+    background-attachment: local;
   }
 }
 
