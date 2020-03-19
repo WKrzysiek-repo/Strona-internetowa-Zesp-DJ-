@@ -25,7 +25,7 @@ document.documentElement.style.setProperty('--vh', `${vh}px`);
 // })
 
 
-//button message
+//button to top
 var top_Button = document.querySelector('top1');
 
 $('.top1').on('click', function () {
@@ -214,12 +214,38 @@ const iconX = document.querySelector(".fa-times");
 const column = document.querySelector("aside");
 const listicon = document.querySelector("ul");
 
+if ($(window).width() < 600) {
+
+    burger.addEventListener('click', function () {
+        document.querySelector('.all-wrapper').classList.toggle('blur');
+        document.querySelector('.arrow').classList.toggle('disable');
+    })
+
+
+    $('.fa-mail-bulk').on('click', function () {
+
+        document.querySelector('.modal-wrap').classList.add('active');
+        document.querySelector('.all-wrapper').classList.add('blur')
+
+        document.querySelector('span.hide').addEventListener("click", function () {
+            document.querySelector('.modal-wrap').classList.remove('active');
+            document.querySelector('.all-wrapper').classList.remove('blur')
+        })
+
+        $('body,html').animate({
+            scrollTop: $('').offset().top,
+        }, 1000)
+
+    })
+
+}
+
+
 burger.addEventListener('click', function () {
     burger.classList.toggle('active');
     iconBurger.classList.toggle("show");
     iconX.classList.toggle("show");
     column.classList.toggle("show");
-
 })
 
 listicon.addEventListener('click', function () {
@@ -227,9 +253,14 @@ listicon.addEventListener('click', function () {
     burger.classList.toggle('active');
     iconBurger.classList.toggle("show");
     iconX.classList.toggle("show");
+    document.querySelector('.all-wrapper').classList.remove('blur');
+    document.querySelector('.arrow').classList.remove('disable');
 })
 
+
+//message button
 $('.fa-mail-bulk').on('click', function () {
+
     console.log(this);
     $('body,html').animate({
         scrollTop: $('.contact-wrapper').offset().top,
