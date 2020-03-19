@@ -17,6 +17,25 @@
 
 <body>
 
+    <?php
+
+    $to      = 'triko42@gmail.com';
+    $name    = $_POST['name1'];
+    $surname    = $_POST['surname1'];
+    $email   = $_POST['mail1'];
+    $tel     =  $_POST['tel1'];
+    $subject = 'Nowy e-mail od ' . $name . ' ' . $surname . ' (' . $tel . ')';
+    $message = $_POST['message1'];
+    $headers = 'From: ' . $name . ' (' . $email . ')';
+    $headers .= 'Content-Type: text/html; charset=utf-8';
+    
+    mail($to, $subject, $message, $headers);
+    
+    echo '<h1>Wiadomość wysłana :)</h1>';
+    
+    ?>
+
+
     <!--BUTTON CONTACT -->
     <button class="kontaktbutton"><i class="fas fa-mail-bulk"></i></button>
 
@@ -76,10 +95,10 @@
             <div class="contact-container">
                 <h2>Napisz do mnie</h2>
                 <form>
-                    <input type="name" placeholder="Imie">
-                    <input type="surname" placeholder="Nazwisko">
-                    <input type="mail" placeholder="E-mail">
-                    <input type="tel" placeholder="Numer telefonu">
+                    <input type="name" name="name1" placeholder="Imie">
+                    <input type="surname" name="surname1" placeholder="Nazwisko">
+                    <input type="mail" name="mail1" placeholder="E-mail">
+                    <input type="tel" name="mail1" placeholder="Numer telefonu">
                     <textarea required rows="10" cols="20" name="message1" id="message1"
                         title="Wpisz treść swojej wiadomości" placeholder="Treść wiadomości"></textarea>
                     <input id="submit" type="submit" value="Wyślij">
@@ -270,10 +289,10 @@
                     <div class="contact-container">
                         <h2>Napisz do mnie</h2>
                         <form>
-                            <input type="name" placeholder="Imie">
-                            <input type="surname" placeholder="Nazwisko">
-                            <input type="mail" placeholder="E-mail">
-                            <input type="tel" placeholder="Numer telefonu">
+                            <input type="name" name="name1" placeholder="Imie">
+                            <input type="surname" name="surname1" placeholder="Nazwisko">
+                            <input type="mail" name="mail1" placeholder="E-mail">
+                            <input type="tel" name="tel1" placeholder="Numer telefonu">
                             <textarea required rows="10" cols="20" name="message1" id="message1"
                                 title="Wpisz treść swojej wiadomości" placeholder="Treść wiadomości"></textarea>
                             <input id="submit" type="submit" value="Wyślij">
