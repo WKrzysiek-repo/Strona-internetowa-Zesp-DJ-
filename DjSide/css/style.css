@@ -322,6 +322,7 @@ body {
 
 @media (max-width: 1300px) {
   .status-bar {
+    height: 30vh;
     width: 3%;
   }
   .head-wrapper {
@@ -335,12 +336,13 @@ body {
 }
 
 @media (max-width: 600px) {
-  html {
+  body {
     min-height: -moz-available;
     /* WebKit-based browsers will ignore this. */
     min-height: -webkit-fill-available;
     /* Mozilla-based browsers will ignore this. */
     min-height: fill-available;
+    height: calc(var(--vh, 1vh) * auto);
   }
   .status-bar {
     display: block;
@@ -373,17 +375,17 @@ body {
   .status-bar .bar-position a {
     font-size: 2.5vh;
     margin: 2% auto;
-    color: blue;
+    color: darkorange;
     cursor: pointer;
   }
   .status-bar.active {
     top: 95vh;
   }
   .head-wrapper {
-    height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
   }
   .head-wrapper .foto1 {
-    height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
     background-attachment: scroll;
   }
   .head-wrapper .foto1 p {
@@ -440,10 +442,6 @@ p {
   background: #0c0930;
   background: -webkit-gradient(linear, left top, right top, from(#190A05), color-stop(#0c0930), to(#190A05));
   background: linear-gradient(to right, #190A05, #0c0930, #190A05);
-}
-
-.body-wrapper {
-  height: 100%;
 }
 
 .body-wrapper .info {

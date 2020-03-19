@@ -249,7 +249,7 @@ body {
 @media (max-width: 1300px) {
 
     .status-bar {
-
+        height: 30vh;
         width: 3%;
 
 
@@ -273,12 +273,14 @@ body {
 
 @media (max-width: 600px) {
 
-    html {
+    body {
         min-height: -moz-available;
         /* WebKit-based browsers will ignore this. */
         min-height: -webkit-fill-available;
         /* Mozilla-based browsers will ignore this. */
         min-height: fill-available;
+
+        height: calc(var(--vh, 1vh) * auto);
     }
 
     .status-bar {
@@ -307,7 +309,7 @@ body {
             a {
                 font-size: 2.5vh;
                 margin: 2% auto;
-                color: blue;
+                color: darkorange;
                 cursor: pointer;
             }
         }
@@ -319,10 +321,11 @@ body {
 
 
     .head-wrapper {
-        height: 100vh;
+        //height: 100vh;
+        height: calc(var(--vh, 1vh) * 100);
 
         .foto1 {
-            height: 100vh;
+            height: calc(var(--vh, 1vh) * 100);
             background-attachment: scroll;
 
             p {
