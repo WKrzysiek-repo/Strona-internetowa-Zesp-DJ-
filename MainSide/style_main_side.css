@@ -251,11 +251,11 @@ body {
 }
 
 .load {
-    border: 8px solid brown;
-    border-radius: 100%;
-    border-top: 8px dotted darkorange;
-    width: 80px;
-    height: 80px;
+    border: 1vh solid brown;
+    border-radius: 50%;
+    border-top: 1vh solid darkorange;
+    width: 8vh;
+    height: 8vh;
     animation: animationloader 2s linear infinite;
 }
 
@@ -263,10 +263,13 @@ body {
     0% {
         transform: rotate(0deg);
 
+
     }
+
 
     100% {
         transform: rotate(360deg);
+
 
     }
 }
