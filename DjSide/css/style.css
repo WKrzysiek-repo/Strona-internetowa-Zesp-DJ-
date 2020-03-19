@@ -16,7 +16,13 @@ body {
   background-image: linear-gradient(300deg, #0c0930 0%, #000000 70%);
 }
 
-.status-bar {
+.head-wrapper {
+  width: 100%;
+  height: 100vh;
+  background-color: black;
+}
+
+.head-wrapper .status-bar {
   display: block;
   position: fixed;
   top: 0;
@@ -26,9 +32,10 @@ body {
   z-index: 1000;
   -webkit-transition: 0.5s;
   transition: 0.5s;
+  overflow-x: hidden;
 }
 
-.status-bar .bar-position {
+.head-wrapper .status-bar .bar-position {
   position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -48,27 +55,23 @@ body {
   border-top: 2px solid #D05A38;
   border-bottom: 2px solid #D05A38;
   border-radius: 50px 0 0 50px;
+  overflow-x: hidden;
 }
 
-.status-bar .bar-position a {
+.head-wrapper .status-bar .bar-position a {
   font-size: 2vh;
   margin: 100% auto;
   color: #D05A38;
   cursor: pointer;
+  overflow-x: hidden;
 }
 
-.status-bar.active {
+.head-wrapper .status-bar.active {
   right: 0%;
 }
 
-.status-bar.hide {
+.head-wrapper .status-bar.hide {
   display: none;
-}
-
-.head-wrapper {
-  width: 100%;
-  height: 100vh;
-  background-color: black;
 }
 
 .head-wrapper .foto1 {
@@ -82,6 +85,7 @@ body {
   background-attachment: fixed;
   -webkit-box-shadow: inset 0px 0px 0px #182019, inset 0px -10px 15px #000;
           box-shadow: inset 0px 0px 0px #182019, inset 0px -10px 15px #000;
+  overflow-x: hidden;
 }
 
 .head-wrapper .foto1 p {
@@ -99,6 +103,7 @@ body {
   font-family: 'Advent Pro', sans-serif;
   -webkit-animation: animation_slider 1s;
           animation: animation_slider 1s;
+  overflow-x: hidden;
 }
 
 .head-wrapper .kontaktbutton {
@@ -122,6 +127,7 @@ body {
   transition: 0.5s;
   border: none;
   cursor: pointer;
+  overflow-x: hidden;
 }
 
 .head-wrapper .kontaktbutton:hover {
@@ -145,6 +151,7 @@ body {
   -webkit-transition: .2s;
   transition: .2s;
   cursor: pointer;
+  overflow-x: hidden;
 }
 
 .head-wrapper .arrow i {
@@ -156,6 +163,87 @@ body {
   -webkit-animation: aanimation_arrow 1.3s 1s infinite linear;
           animation: aanimation_arrow 1.3s 1s infinite linear;
   overflow: hidden;
+  overflow-x: hidden;
+}
+
+.head-wrapper .burger {
+  position: fixed;
+  top: 5%;
+  left: 2%;
+  font-size: 4vh;
+  -webkit-transition: .3s linear;
+  transition: .3s linear;
+  z-index: 200;
+  overflow-x: hidden;
+}
+
+.head-wrapper .burger:hover {
+  cursor: pointer;
+}
+
+.head-wrapper .burger.active {
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
+
+.head-wrapper .burger i.show {
+  display: block;
+}
+
+.head-wrapper .burger .fas {
+  display: none;
+  color: orange;
+}
+
+.head-wrapper aside {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: -30vh;
+  width: 30vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  -webkit-transition: .3s linear;
+  transition: .3s linear;
+  z-index: 100;
+  border-bottom-right-radius: 200px 200px;
+  border-right: 2px groove #D05A38;
+  border-bottom: 2px groove #D05A38;
+  overflow: hidden;
+}
+
+.head-wrapper aside.show {
+  left: 0%;
+}
+
+.head-wrapper aside nav ul {
+  list-style: none;
+  margin-top: 35%;
+}
+
+.head-wrapper aside nav ul a {
+  display: block;
+  line-height: 10vh;
+  font-size: 2.5vh;
+  color: white;
+  text-decoration: none;
+  font-family: arial;
+  padding: 0 5% 0 10%;
+}
+
+.head-wrapper aside nav ul a:hover i {
+  margin-right: 20%;
+}
+
+.head-wrapper aside nav ul a:hover {
+  color: orange;
+}
+
+.head-wrapper aside nav ul i {
+  width: 5vh;
+  border-right: solid white 2px;
+  margin-right: 30px;
+  -webkit-transition: .3s;
+  transition: .3s;
 }
 
 @-webkit-keyframes aanimation_arrow {
@@ -321,14 +409,14 @@ body {
 }
 
 @media (max-width: 1300px) {
-  .status-bar {
-    height: 30vh;
-    width: 3%;
-  }
   .head-wrapper {
     width: 100%;
     height: 100vh;
     background-color: black;
+  }
+  .head-wrapper .status-bar {
+    height: 30vh;
+    width: 3%;
   }
   .head-wrapper .foto1 p {
     font-size: 3.5vw;
@@ -336,15 +424,17 @@ body {
 }
 
 @media (max-width: 600px) {
-  body {
+  .head-wrapper {
+    height: calc(var(--vh, 1vh) * 100);
+  }
+  .head-wrapper body {
     min-height: -moz-available;
     /* WebKit-based browsers will ignore this. */
     min-height: -webkit-fill-available;
     /* Mozilla-based browsers will ignore this. */
     min-height: fill-available;
-    height: calc(var(--vh, 1vh) * auto);
   }
-  .status-bar {
+  .head-wrapper .status-bar {
     display: block;
     position: fixed;
     top: 100vh;
@@ -352,7 +442,7 @@ body {
     width: 100%;
     height: 7vh;
   }
-  .status-bar .bar-position {
+  .head-wrapper .status-bar .bar-position {
     position: absolute;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -372,17 +462,14 @@ body {
     border-top: 0px solid #D05A38;
     border-radius: 0px;
   }
-  .status-bar .bar-position a {
+  .head-wrapper .status-bar .bar-position a {
     font-size: 2.5vh;
     margin: 2% auto;
     color: darkorange;
     cursor: pointer;
   }
-  .status-bar.active {
+  .head-wrapper .status-bar.active {
     top: 95vh;
-  }
-  .head-wrapper {
-    height: calc(var(--vh, 1vh) * 100);
   }
   .head-wrapper .foto1 {
     height: calc(var(--vh, 1vh) * 100);
@@ -416,6 +503,42 @@ body {
     border-radius: 50%;
     font-size: 100px;
   }
+  .head-wrapper .burger {
+    top: 5%;
+    left: 5%;
+    font-size: 4vh;
+  }
+  .head-wrapper aside {
+    left: -100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.95);
+    border-bottom-right-radius: 0px 0px;
+    border-top: 2px groove #D05A38;
+    border-right: 2px groove #D05A38;
+    border-bottom: 2px groove #D05A38;
+  }
+  .head-wrapper aside nav ul a {
+    display: block;
+    line-height: 10vh;
+    font-size: 2.5vh;
+    color: white;
+    text-decoration: none;
+    font-family: arial;
+    padding: 0 5% 0 25%;
+  }
+  .head-wrapper aside nav ul a:hover i {
+    margin-right: 10%;
+  }
+  .head-wrapper aside nav ul a:hover {
+    color: white;
+  }
+  .head-wrapper aside nav ul i {
+    width: 5vh;
+    border-right: solid white 2px;
+    margin-right: 30px;
+    -webkit-transition: .3s;
+    transition: .3s;
+  }
 }
 
 h1 {
@@ -442,6 +565,14 @@ p {
   background: #0c0930;
   background: -webkit-gradient(linear, left top, right top, from(#190A05), color-stop(#0c0930), to(#190A05));
   background: linear-gradient(to right, #190A05, #0c0930, #190A05);
+}
+
+.body-wrapper {
+  min-height: -moz-available;
+  /* WebKit-based browsers will ignore this. */
+  min-height: -webkit-fill-available;
+  /* Mozilla-based browsers will ignore this. */
+  min-height: fill-available;
 }
 
 .body-wrapper .info {
@@ -566,6 +697,11 @@ p {
 }
 
 .photo_animation {
+  min-height: -moz-available;
+  /* WebKit-based browsers will ignore this. */
+  min-height: -webkit-fill-available;
+  /* Mozilla-based browsers will ignore this. */
+  min-height: fill-available;
   width: 100%;
   margin: 0 auto;
 }
@@ -1248,85 +1384,6 @@ footer button i {
     color: #D05A38;
     font-size: 4vh;
   }
-}
-
-.burger {
-  position: fixed;
-  top: 5%;
-  left: 2%;
-  font-size: 4vh;
-  -webkit-transition: .3s linear;
-  transition: .3s linear;
-  z-index: 200;
-}
-
-.burger:hover {
-  cursor: pointer;
-}
-
-.burger.active {
-  -webkit-transform: rotate(360deg);
-          transform: rotate(360deg);
-}
-
-.burger i.show {
-  display: block;
-}
-
-.burger .fas {
-  display: none;
-  color: orange;
-}
-
-aside {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: -30vh;
-  width: 30vh;
-  background-color: rgba(0, 0, 0, 0.5);
-  -webkit-transition: .3s linear;
-  transition: .3s linear;
-  z-index: 100;
-  border-bottom-right-radius: 200px 200px;
-  border-right: 2px groove #D05A38;
-  border-bottom: 2px groove #D05A38;
-  overflow: hidden;
-}
-
-aside.show {
-  left: 0%;
-}
-
-aside nav ul {
-  list-style: none;
-  margin-top: 35%;
-}
-
-aside nav ul a {
-  display: block;
-  line-height: 10vh;
-  font-size: 2.5vh;
-  color: white;
-  text-decoration: none;
-  font-family: arial;
-  padding: 0 5% 0 10%;
-}
-
-aside nav ul a:hover i {
-  margin-right: 20%;
-}
-
-aside nav ul a:hover {
-  color: orange;
-}
-
-aside nav ul i {
-  width: 5vh;
-  border-right: solid white 2px;
-  margin-right: 30px;
-  -webkit-transition: .3s;
-  transition: .3s;
 }
 
 #preloader {

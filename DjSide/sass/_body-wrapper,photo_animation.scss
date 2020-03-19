@@ -25,7 +25,11 @@ p {
 }
 
 .body-wrapper {
-
+    min-height: -moz-available;
+    /* WebKit-based browsers will ignore this. */
+    min-height: -webkit-fill-available;
+    /* Mozilla-based browsers will ignore this. */
+    min-height: fill-available;
 
     .info {
         max-width: 60%;
@@ -35,7 +39,6 @@ p {
         justify-content: center;
         align-content: center;
         margin: 0 auto;
-
 
 
         div {
@@ -116,7 +119,15 @@ p {
     }
 }
 
+
+
+
 .photo_animation {
+    min-height: -moz-available;
+    /* WebKit-based browsers will ignore this. */
+    min-height: -webkit-fill-available;
+    /* Mozilla-based browsers will ignore this. */
+    min-height: fill-available;
     width: 100%;
     margin: 0 auto;
 

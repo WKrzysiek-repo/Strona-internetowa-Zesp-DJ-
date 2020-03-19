@@ -176,6 +176,7 @@ $(document).on('scroll', function () {
             }
         });
 
+
         if (scrollvalue > photo1FromTop + photo1Height - windowHeight) {
             $photo1.addClass('active');
         }
