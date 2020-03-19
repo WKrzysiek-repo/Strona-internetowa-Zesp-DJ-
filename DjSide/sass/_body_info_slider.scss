@@ -241,7 +241,9 @@ p {
 
 
     .body-wrapper {
-        height: 100%;
+        height: calc(var(--vh, 1vh) * auto);
+
+
 
 
 
