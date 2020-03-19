@@ -12,7 +12,7 @@
 }
 
 .offer-wrapper {
-    height: auto;
+    height: calc(var(--vh, 1vh) * auto);
 
     .offer {
         display: flex;
@@ -131,8 +131,7 @@
 
     .ornament1 {
         width: 100%;
-        //height: 20vmin;
-        height: calc(var(--vh, 1vh) * 20);
+        height: 20vmin;
 
     }
 
@@ -148,8 +147,7 @@
             .col2 {
 
                 flex-basis: 90%;
-                //height: 40vh;
-                height: calc(var(--vh, 1vh) * 40);
+                height: 40vh;
 
                 margin: 5%;
 
@@ -169,7 +167,7 @@
 
             a {
                 margin: 3% 1%;
-                flex-basis: calc(var(--vh, 1vh) * 20);
+                flex-basis: 20vh;
                 height: 15vh;
 
 
@@ -184,8 +182,7 @@
 
 
     .ornament2 {
-        //height: 20vmin;
-        height: calc(var(--vh, 1vh) * 20);
+        height: 20vmin;
 
 
     }

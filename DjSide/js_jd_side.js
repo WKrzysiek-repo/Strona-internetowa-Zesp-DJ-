@@ -24,6 +24,12 @@
 let vh = window.innerHeight * 0.01;
 document.documentElement.style.setProperty('--vh', `${vh}px`);
 
+
+window.addEventListener('resize', () => {
+    let vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+});
+
 //nav
 const burger = document.querySelector(".burger");
 const iconBurger = document.querySelector(".fa-bars");

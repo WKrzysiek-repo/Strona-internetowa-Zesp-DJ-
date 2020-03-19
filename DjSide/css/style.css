@@ -9,7 +9,6 @@
 
 html {
   scroll-behavior: smooth;
-  min-height: -webkit-fill-available;
 }
 
 body {
@@ -338,15 +337,14 @@ body {
 @media (max-width: 600px) {
   html {
     min-height: -webkit-fill-available;
-    height: calc(var(--vh, 1vh) * 100);
   }
   .status-bar {
-    display: block;
+    display: none;
     position: fixed;
-    top: calc(var(--vh, 1vh) * 100);
+    top: 100vh;
     right: 0%;
     width: 100%;
-    height: calc(var(--vh, 1vh) * 7);
+    height: 7vh;
   }
   .status-bar .bar-position {
     position: absolute;
@@ -387,13 +385,13 @@ body {
   .head-wrapper .foto1 p {
     font-size: 6vw;
     width: 90%;
-    color: salmon;
+    color: green;
   }
   .head-wrapper .kontaktbutton {
     right: 2%;
     font-size: 5vh;
     width: 7vh;
-    height: calc(var(--vh, 1vh) * 7);
+    height: 7vh;
   }
   .head-wrapper .kontaktbutton:hover {
     color: black;
@@ -685,7 +683,7 @@ p {
     margin: 10% 0%;
   }
   .body-wrapper {
-    height: 100%;
+    height: calc(var(--vh, 1vh) * 100);
   }
   .body-wrapper .info {
     max-width: 100%;
@@ -703,10 +701,11 @@ p {
   .photo_animation {
     width: 100%;
     margin: 10% auto;
+    height: calc(var(--vh, 1vh) * auto);
   }
   .photo_animation .photo_inside {
     width: 90%;
-    height: calc(var(--vh, 1vh) * 30);
+    height: 30vmax;
   }
 }
 
@@ -724,7 +723,7 @@ p {
 }
 
 .offer-wrapper {
-  height: auto;
+  height: calc(var(--vh, 1vh) * auto);
 }
 
 .offer-wrapper .offer {
@@ -845,7 +844,7 @@ p {
 @media (max-width: 600px) {
   .ornament1 {
     width: 100%;
-    height: calc(var(--vh, 1vh) * 20);
+    height: 20vmin;
   }
   .offer-wrapper .offer {
     max-width: 100%;
@@ -854,7 +853,7 @@ p {
   .offer-wrapper .offer .col2 {
     -ms-flex-preferred-size: 90%;
         flex-basis: 90%;
-    height: calc(var(--vh, 1vh) * 40);
+    height: 40vh;
     margin: 5%;
   }
   .gallery .images {
@@ -862,8 +861,8 @@ p {
   }
   .gallery .images a {
     margin: 3% 1%;
-    -ms-flex-preferred-size: calc(var(--vh, 1vh) * 20);
-        flex-basis: calc(var(--vh, 1vh) * 20);
+    -ms-flex-preferred-size: 20vh;
+        flex-basis: 20vh;
     height: 15vh;
   }
   .gallery .images a:hover {
@@ -871,7 +870,7 @@ p {
             transform: scale(1.1);
   }
   .ornament2 {
-    height: calc(var(--vh, 1vh) * 20);
+    height: 20vmin;
   }
 }
 
@@ -1398,7 +1397,7 @@ aside nav ul i {
   .burger {
     top: 5%;
     left: 5%;
-    font-size: calc(var(--vh, 1vh) * 4);
+    font-size: 4vh;
   }
   aside {
     left: -100%;

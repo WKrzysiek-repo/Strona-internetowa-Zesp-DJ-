@@ -11,7 +11,7 @@ html {
     scroll-behavior: smooth;
     //font-size: 10px;
     //font-size: 62.5%;
-    min-height: -webkit-fill-available;
+    //min-height: -webkit-fill-available;
 }
 
 
@@ -278,17 +278,16 @@ body {
 
     html {
         min-height: -webkit-fill-available;
-        height: calc(var(--vh, 1vh) * 100);
     }
 
 
     .status-bar {
-        display: block;
+        display: none;
         position: fixed;
-        top: calc(var(--vh, 1vh) * 100);
+        top: 100vh;
         right: 0%;
         width: 100%;
-        height: calc(var(--vh, 1vh) * 7);
+        height: 7vh;
 
 
         .bar-position {
@@ -320,16 +319,18 @@ body {
 
 
     .head-wrapper {
+        //height: 100vh;
         height: calc(var(--vh, 1vh) * 100);
 
         .foto1 {
+            //height: 100vh;
             height: calc(var(--vh, 1vh) * 100);
             background-attachment: scroll;
 
             p {
                 font-size: 6vw;
                 width: 90%;
-                color: salmon;
+                color: green;
             }
 
         }
@@ -338,8 +339,7 @@ body {
             right: 2%;
             font-size: 5vh;
             width: 7vh;
-            height: calc(var(--vh, 1vh) * 7);
-
+            height: 7vh;
 
             &:hover {
                 color: black;
