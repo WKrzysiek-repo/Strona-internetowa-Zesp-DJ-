@@ -383,19 +383,18 @@ body {
 
 @media (max-width: 600px) {
 
+    body {
+        min-height: -moz-available;
+        /* WebKit-based browsers will ignore this. */
+        min-height: -webkit-fill-available;
+        /* Mozilla-based browsers will ignore this. */
+        min-height: fill-available;
+    }
 
     .head-wrapper {
         //height: 100vh;
         height: calc(var(--vh, 1vh) * 100);
 
-
-        body {
-            min-height: -moz-available;
-            /* WebKit-based browsers will ignore this. */
-            min-height: -webkit-fill-available;
-            /* Mozilla-based browsers will ignore this. */
-            min-height: fill-available;
-        }
 
         .status-bar {
             display: block;

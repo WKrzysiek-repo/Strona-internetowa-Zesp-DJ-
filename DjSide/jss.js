@@ -1,3 +1,6 @@
+let vh = window.innerHeight * 0.01;
+document.documentElement.style.setProperty('--vh', `${vh}px`);
+
 $(document).on('scroll', function () {
 
     const scrollvalue = $(this).scrollTop();
@@ -23,13 +26,13 @@ $(document).on('scroll', function () {
 
     if ($(window).width() < 600) {
 
-        $(window).scroll(function () {
-            if ($(window).scrollTop() + $(window).height() > $(document).height() - 100) {
-                $ibar.removeClass('fas');
-                $('.dot5').addClass('fas')
-                $bar1.removeClass('active');
-            }
-        });
+        // $(window).scroll(function () {
+        //     if ($(window).scrollTop() + $(window).height() > $(document).height() - 100) {
+        //         $ibar.removeClass('fas');
+        //         $('.dot5').addClass('fas')
+        //         $bar1.removeClass('active');
+        //     }
+        // });
 
         if (scrollvalue > photo1FromTop + photo1Height - windowHeight) {
             $photo1.addClass('active');
@@ -77,5 +80,52 @@ $(document).on('scroll', function () {
 
 
 
+
+})
+
+
+//nav
+const burger = document.querySelector(".burger");
+const iconBurger = document.querySelector(".fa-bars");
+const iconX = document.querySelector(".fa-times");
+const column = document.querySelector("aside");
+const listicon = document.querySelector("ul");
+
+burger.addEventListener('click', function () {
+    burger.classList.toggle('active');
+    iconBurger.classList.toggle("show");
+    iconX.classList.toggle("show");
+    column.classList.toggle("show");
+
+})
+
+listicon.addEventListener('click', function () {
+    column.classList.toggle('show');
+    burger.classList.toggle('active');
+    iconBurger.classList.toggle("show");
+    iconX.classList.toggle("show");
+})
+
+$('.fa-mail-bulk').on('click', function () {
+    console.log(this);
+    $('body,html').animate({
+        scrollTop: $('.contact-wrapper').offset().top,
+    }, 1000)
+
+})
+
+$('.arrow').on('click', function () {
+    $('body,html').animate({
+        scrollTop: $('.body-wrapper').offset().top,
+    }, 1000)
+
+})
+
+$('nav a, .bar-position a').on('click', function () {
+    const goToSection = '#' + $(this).attr('class');
+
+    $('body,html').animate({
+        scrollTop: $(goToSection).offset().top,
+    }, 500)
 
 })

@@ -424,15 +424,15 @@ body {
 }
 
 @media (max-width: 600px) {
-  .head-wrapper {
-    height: calc(var(--vh, 1vh) * 100);
-  }
-  .head-wrapper body {
+  body {
     min-height: -moz-available;
     /* WebKit-based browsers will ignore this. */
     min-height: -webkit-fill-available;
     /* Mozilla-based browsers will ignore this. */
     min-height: fill-available;
+  }
+  .head-wrapper {
+    height: calc(var(--vh, 1vh) * 100);
   }
   .head-wrapper .status-bar {
     display: block;
