@@ -202,6 +202,12 @@ body {
   }
 }
 
+.all_1 {
+  background: #0c0930;
+  background: -webkit-gradient(linear, left top, right top, from(#190A05), color-stop(#0c0930), to(#190A05));
+  background: linear-gradient(to right, #190A05, #0c0930, #190A05);
+}
+
 .kontaktbutton {
   position: fixed;
   top: 3%;
@@ -832,10 +838,6 @@ h1 {
   border-radius: 0px 0px 10px 10px;
   margin: 2% 20% 2% 20%;
   padding: 0 5% 0 10%;
-}
-
-p {
-  font-family: "Lato", sans-serif;
 }
 
 .main-side {
