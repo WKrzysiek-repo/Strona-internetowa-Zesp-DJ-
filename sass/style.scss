@@ -1,8 +1,8 @@
 @import 'variables';
 @import 'mixins';
-@import 'mainside';
-@import 'head-wrapper';
-@import 'body-wrapper,photo_animation';
-@import 'ornaments,offer-wrapper,gallery';
-@import 'body_contact_footer';
+@import 'index';
+@import 'dj-head-wrapper';
+@import 'dj-body-wrapper';
+@import 'dj-offer-wrapper';
+@import 'dj-footer';
 @import 'preloader';

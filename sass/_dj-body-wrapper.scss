@@ -1,0 +1,281 @@
+h1 {
+    display: block;
+    width: 60%;
+    color: white;
+    font-family: 'Advent Pro', sans-serif;
+    letter-spacing: 3px;
+    text-shadow: 4px 2px 1px #D05A38;
+    font-size: 3.5vw;
+    border-bottom: 4px solid white;
+    box-shadow: 0px 4px #D05A38;
+    border-radius: 0px 0px 10px 10px;
+    margin: 2% 20% 2% 20%;
+    padding: 0 5% 0 10%;
+}
+
+
+.main-side {
+
+    background: #0c0930;
+    background: -webkit-linear-gradient(to right, #190A05, #0c0930, #190A05);
+    background: linear-gradient(to right, #190A05, #0c0930, #190A05);
+
+}
+
+.body-wrapper {
+
+    .info {
+        max-width: 60%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: center;
+        margin: 0 auto;
+
+
+        div {
+            flex-basis: 50%;
+            max-height: 60vh;
+            overflow: hidden;
+            box-sizing: border-box;
+            transform-origin: right;
+            border-color: 6px solid black;
+            transition: 1s linear;
+
+            img {
+                overflow: hidden;
+                max-width: 100%;
+                max-height: auto;
+            }
+        }
+
+        .infotext1,
+        .infophoto1 {
+            transform: translateX(100vw);
+
+            &.active {
+                transform: translateX(0vw);
+            }
+        }
+
+        .infotext2,
+        .infophoto2 {
+            transform: translateX(-100vw);
+
+            &.active {
+                transform: translateX(0vw);
+            }
+        }
+
+
+        .infotext1,
+        .infotext2 {
+            font-size: 1vw;
+            font-family: 'Roboto', sans-serif;
+        }
+
+
+        p {
+            text-align: justify;
+            color: white;
+            margin: 3% 5%;
+        }
+    }
+}
+
+// @keyframes h1_animacja {
+
+//     0% {
+//         color: white;
+//         text-shadow: 6px 2px 1px #D05A38;
+//     }
+
+//     25% {
+//         color: white;
+//         text-shadow: 6px 2px 1px #D05A38;
+//     }
+
+//     50% {
+//         color: #D05A38;
+//         text-shadow: 6px 2px 1px white;
+//     }
+
+//     75% {
+//         color: #D05A38;
+//         text-shadow: 6px 2px 1px white;
+//     }
+
+//     100% {
+//         color: white;
+//         text-shadow: 6px 2px 1px #D05A38;
+//     }
+// }
+
+
+
+
+.photo_animation {
+    width: 100%;
+    margin: 0 auto;
+
+    .photo_inside {
+        position: relative;
+        width: 50%;
+        height: 30vmax;
+        margin: 3% auto;
+        box-shadow: 0 0 1em #D05A38;
+
+        img {
+            position: absolute;
+            top: 0%;
+            left: 0%;
+            width: 100%;
+            height: 100%;
+            animation: zmiana_slajdu 12s infinite linear;
+            opacity: 0;
+
+
+            &:nth-child(2) {
+
+
+                animation-delay: 4s;
+
+            }
+
+            &:nth-child(3) {
+
+
+                animation-delay: 8s;
+
+            }
+
+        }
+
+    }
+
+}
+
+@keyframes zmiana_slajdu {
+
+    0% {
+        opacity: 0;
+    }
+
+    5% {
+        opacity: 1
+    }
+
+    33.33% {
+        opacity: 1
+    }
+
+    38.33% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+
+}
+
+
+@media (max-width: 1300px) {
+
+    h1 {
+        display: block;
+        width: 90%;
+        font-size: 6vw;
+        margin: 2% 5% 2% 5%;
+
+    }
+
+    .body-wrapper {
+        height: auto;
+
+
+        .info {
+            max-width: 80%;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-content: center;
+            margin: 0 auto;
+
+
+            .infotext1,
+            .infotext2 {
+                font-size: 1.8vw;
+            }
+
+        }
+    }
+
+    .photo_animation {
+
+        .photo_inside {
+            position: relative;
+            width: 80%;
+            height: 50vmax;
+            margin: 3% auto;
+            box-shadow: 0 0 1em #D05A38;
+        }
+
+    }
+
+
+}
+
+
+@media (max-width: 600px) {
+
+    html {
+        font-size: 62.5%;
+    }
+
+
+    h1 {
+        width: 100%;
+        font-size: 10vw;
+        margin: 10% 0%;
+    }
+
+
+    .body-wrapper {
+
+        .info {
+            max-width: 100%;
+
+
+            div {
+                flex-basis: 90%;
+
+
+            }
+
+            p {
+                font-size: 1.5rem;
+                text-align: justify;
+                color: white;
+                margin: 3% 5%;
+            }
+        }
+    }
+
+
+    .photo_animation {
+        width: 100%;
+        margin: 10% auto;
+
+        .photo_inside {
+            width: 90%;
+            height: 30vmax;
+
+
+        }
+
+    }
+
+}

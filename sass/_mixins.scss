@@ -1,0 +1,19 @@
+@mixin index_photo {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-right: 1px solid black;
+    box-shadow: inset 5px 5px 5px #182019, inset -5px -5px 5px #182019;
+    cursor: pointer;
+}
+
+@mixin index_text {
+    padding: 20px 0;
+    text-decoration: none;
+    color: gray;
+    text-transform: uppercase;
+    text-align: center;
+    background-color: rgba(0, 0, 0, .85);
+    transition: 1s;
+    transform-origin: center;
+}

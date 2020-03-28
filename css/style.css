@@ -12,7 +12,6 @@ html {
 }
 
 body {
-  overflow: hidden;
   background-color: #000;
   font-family: 'Advent Pro', sans-serif;
   -webkit-box-sizing: border-box;
@@ -30,8 +29,8 @@ body {
   height: 100%;
   top: 0;
   left: 0;
-  background-repeat: no-repeat;
   background-image: url(../img/drum-set-1839383_1280.jpg);
+  background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   border-right: 1px solid black;
@@ -57,7 +56,7 @@ body {
   color: gray;
   text-transform: uppercase;
   text-align: center;
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.85);
   -webkit-transition: 1s;
   transition: 1s;
   -webkit-transform-origin: center;
@@ -79,11 +78,11 @@ body {
   height: 100%;
   top: 0%;
   right: 0%;
-  background-repeat: no-repeat;
   background-image: url(../img/vinyl2.jpg);
+  background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  border-left: 1px solid black;
+  border-right: 1px solid black;
   -webkit-box-shadow: inset 5px 5px 5px #182019, inset -5px -5px 5px #182019;
           box-shadow: inset 5px 5px 5px #182019, inset -5px -5px 5px #182019;
   cursor: pointer;
@@ -106,7 +105,7 @@ body {
   color: gray;
   text-transform: uppercase;
   text-align: center;
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.85);
   -webkit-transition: 1s;
   transition: 1s;
   -webkit-transform-origin: center;
@@ -161,7 +160,7 @@ body {
     top: 50%;
     right: 0%;
   }
-  .wrapper .main_photo2 .main_photo2 p.text2 {
+  .wrapper .main_photo2 p.text2 {
     top: calc(50% - 20px);
     padding: 10px 0;
     background-color: black;
@@ -189,23 +188,17 @@ body {
     border-top-right-radius: 0px;
     border-bottom-right-radius: 0px;
   }
-  .wrapper .main_photo2 p.text2 {
+  .wrapper p.text2 {
     border-radius: 50px 50px 50px 50px;
     top: calc(50% - 10px);
     padding: 5px 0;
     background-color: black;
   }
-  .wrapper .main_photo2 p.text2:hover p.text2 {
+  .wrapper p.text2:hover p.text2 {
     width: 100%;
     border-top-right-radius: 0px;
     border-bottom-right-radius: 0px;
   }
-}
-
-.all_1 {
-  background: #0c0930;
-  background: -webkit-gradient(linear, left top, right top, from(#190A05), color-stop(#0c0930), to(#190A05));
-  background: linear-gradient(to right, #190A05, #0c0930, #190A05);
 }
 
 .kontaktbutton {
@@ -229,7 +222,7 @@ body {
   transition: 0.5s;
   border: none;
   cursor: pointer;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 .kontaktbutton:hover {
@@ -247,7 +240,7 @@ body {
   -webkit-transition: .3s linear;
   transition: .3s linear;
   z-index: 200;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 .burger:hover {
@@ -292,6 +285,7 @@ aside.show {
 aside nav ul {
   list-style: none;
   margin-top: 35%;
+  overflow: hidden;
 }
 
 aside nav ul a {
@@ -318,10 +312,12 @@ aside nav ul i {
   margin-right: 30px;
   -webkit-transition: .3s;
   transition: .3s;
+  overflow: hidden;
 }
 
 .modal-wrap {
   display: none;
+  overflow: hidden;
 }
 
 .modal-wrap.active {
@@ -446,6 +442,7 @@ aside nav ul i {
   width: 100%;
   height: 100vh;
   background-color: black;
+  overflow: hidden;
 }
 
 .head-wrapper .status-bar {
@@ -511,7 +508,7 @@ aside nav ul i {
   background-attachment: fixed;
   -webkit-box-shadow: inset 0px 0px 0px #182019, inset 0px -10px 15px #000;
           box-shadow: inset 0px 0px 0px #182019, inset 0px -10px 15px #000;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 .head-wrapper .foto1 p {
@@ -529,7 +526,7 @@ aside nav ul i {
   font-family: 'Advent Pro', sans-serif;
   -webkit-animation: animation_slider 1s;
           animation: animation_slider 1s;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 .head-wrapper .arrow {
@@ -546,7 +543,7 @@ aside nav ul i {
   -webkit-transition: .2s;
   transition: .2s;
   cursor: pointer;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 .head-wrapper .arrow i {
@@ -558,7 +555,6 @@ aside nav ul i {
   -webkit-animation: aanimation_arrow 1.3s 1s infinite linear;
           animation: aanimation_arrow 1.3s 1s infinite linear;
   overflow: hidden;
-  overflow-x: hidden;
 }
 
 @-webkit-keyframes aanimation_arrow {
