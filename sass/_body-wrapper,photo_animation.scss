@@ -18,6 +18,7 @@ p {
 }
 
 .main-side {
+
     background: #0c0930;
     background: -webkit-linear-gradient(to right, #190A05, #0c0930, #190A05);
     background: linear-gradient(to right, #190A05, #0c0930, #190A05);
@@ -25,11 +26,6 @@ p {
 }
 
 .body-wrapper {
-    min-height: -moz-available;
-    /* WebKit-based browsers will ignore this. */
-    min-height: -webkit-fill-available;
-    /* Mozilla-based browsers will ignore this. */
-    min-height: fill-available;
 
     .info {
         max-width: 60%;
@@ -123,11 +119,6 @@ p {
 
 
 .photo_animation {
-    min-height: -moz-available;
-    /* WebKit-based browsers will ignore this. */
-    min-height: -webkit-fill-available;
-    /* Mozilla-based browsers will ignore this. */
-    min-height: fill-available;
     width: 100%;
     margin: 0 auto;
 

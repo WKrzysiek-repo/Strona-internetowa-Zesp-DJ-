@@ -1,21 +1,8 @@
-@import url(//fonts.googleapis.com/css?family=Advent+Pro&subset=latin,latin-ext);
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    overflow-x: hidden;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    background-color: #0c0930;
-    background-image: linear-gradient(300deg, #0c0930 0%, #000000 70%);
-}
-
+// .all_1 {
+//     background: #0c0930;
+//     background: -webkit-linear-gradient(to right, #190A05, #0c0930, #190A05);
+//     background: linear-gradient(to right, #190A05, #0c0930, #190A05);
+// }
 
 .kontaktbutton {
     position: fixed;
@@ -321,7 +308,7 @@ aside {
         position: absolute;
         width: 100%;
         height: 100vh;
-        background-image: url(../DjSideImg/vinyl2.jpg);
+        background-image: url(../img/vinyl2.jpg);
         background-position: center;
         background-repeat: repeat;
         background-size: cover;
@@ -514,13 +501,7 @@ aside {
         font-size: 62.5%;
     }
 
-    body {
-        min-height: -moz-available;
-        /* WebKit-based browsers will ignore this. */
-        min-height: -webkit-fill-available;
-        /* Mozilla-based browsers will ignore this. */
-        min-height: fill-available;
-    }
+
 
     .kontaktbutton {
         right: 2%;
